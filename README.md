@@ -13,3 +13,6 @@
 **Title**: New Plant Diseases Dataset
 
 **Link**: https://www.kaggle.com/datasets/vipoooool/new-plant-diseases-dataset
+## Processed DataSet:
+**Link**: https://drive.google.com/drive/folders/16HUzkL-ULdqVYdm9RewDhqgRqTzzmLPw
+
