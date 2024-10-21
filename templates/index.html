@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Plant Image</title>
+    <link href="/static/style.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo"><h1>PLANT <span>DISEASE</span> DETECTION🌱</h1></div>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Container -->
+    <div class="container">
+        
+        <h2>UPLOAD AN IMAGE</h2>
+        <form action="{{ url_for('upload_image') }}" method="POST" enctype="multipart/form-data">
+            <input type="file" name="image" accept=".jpg,.jpeg" required>
+            <button type="submit">Upload</button>
+        </form>
+
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul class="flash-messages">
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        {% endwith %}
+    </div>
+</body>
+</html>

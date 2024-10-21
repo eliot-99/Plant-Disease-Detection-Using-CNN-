@@ -1,0 +1,282 @@
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Background Image with Blur */
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('/static/images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    backdrop-filter: blur(8px);
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px 50px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.navbar .logo h1 {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: #34db4a;
+}
+
+.navbar .logo h1 span {
+    color: white;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    gap: 40px;
+}
+
+.navbar ul li {
+    display: inline-block;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #34db4a;
+}
+
+/* Shared Container for Pages */
+.container {
+    background-color: rgba(29, 29, 29, 0.7);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: grid;
+    gap: 15px;
+    border: 2px solid white;
+    margin: 100px auto;
+    width: 90%;
+    max-width: 500px;
+}
+
+/* Title Styling */
+h2 {
+    font-size: 2em;
+    color: #34db4a;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+/* Paragraph and Text Styling */
+p {
+    font-size: 1.1em;
+    line-height: 1.5;
+    color: white;
+    text-align: justify;
+}
+
+/* For Links Inside Container */
+a {
+    color: #34db4a;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: white;
+}
+
+/* Input and Button Styling */
+input[type="file"] {
+    padding: 10px;
+    background-color: #ecf0f1;
+    border: 2px solid rgb(113, 247, 4);
+    border-radius: 5px;
+    font-size: 1em;
+    color: #34495e;
+    width: 65%;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s, border 0.3s;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+/* Button Styling */
+button {
+    padding: 12px 8px;
+    background-color: #34db4a;
+    color: rgb(30, 28, 28);
+    font-size: 1em;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    width: 65%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #34db4a;
+    color: rgb(255, 255, 255);
+    transform: scale(1.05);
+}
+
+/* Flash Messages */
+.flash-messages {
+    margin-top: 20px;
+    list-style-type: none;
+}
+
+.flash-messages li {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Image Box */
+.image-box img {
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(173, 19, 19, 0.1);
+    width: 100%;
+    max-width: 400px;
+    max-height: 300px;
+    border: 2px solid #34db4a;
+}
+
+/* Disease Box */
+.disease-box {
+    background-color: #ecf0f1;
+    padding: 17px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    gap: 5px;
+}
+
+.disease-box p {
+    font-size: 1.2em;
+    color: #2c3e50;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* Back Button */
+.back-button {
+    position: relative;
+    left: 65px;
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #34db4a;
+    color: rgb(30, 28, 28);
+    font-size: 1em;
+    font-weight: 500;
+    border-radius: 8px;
+    width: 65%;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    gap: 5px;
+}
+
+.back-button:hover {
+    background-color: #34db4a;
+    color: rgb(255, 253, 253);
+    transform: scale(1.05);
+}
+
+/* Responsive Styles for Smaller Screens */
+@media screen and (max-width: 768px) {
+    .navbar ul {
+        gap: 20px;
+    }
+
+    .container {
+        padding: 40px;
+        width: 80%;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    button, input[type="file"], .back-button {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navbar ul li a {
+        font-size: 0.9em;
+    }
+
+    .container {
+        padding: 20px;
+        width: 90%;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+
+    button, input[type="file"], .back-button {
+        width: 100%;
+    }
+
+    .back-button {
+        left: 0;
+    }
+
+    .image-box img {
+        max-width: 100%;
+        max-height: 200px;
+    }
+}

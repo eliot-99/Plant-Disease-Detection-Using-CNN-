@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"><h1>PLANT <span>DISEASE</span> DETECTION🌱</h1></div>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h2>About Us</h2>
+        <p style="text-align: center; font-weight: bold;">This is a demo project to detect plant diseases by uploading an image of the plant. The system uses a deep learning model to predict the disease based on the image.</p>
+        <p style="text-align: center; font-weight: bold;"   >Our goal is to help farmers and plant enthusiasts easily identify plant diseases and take necessary actions to protect their crops.</p>
+        <a href="{{ url_for('index') }}" class="back-button">Back to Home</a>
+    </div>
+</body>
+</html>
