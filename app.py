@@ -4,14 +4,12 @@ import random
 from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
-app.secret_key = 'supersecretkey'  # Required for flashing messages
+app.secret_key = 'supersecretkey'
 app.config['UPLOAD_FOLDER'] = 'static/uploads/'
-app.config['ALLOWED_EXTENSIONS'] = {'jpg', 'jpeg','png'}
+app.config['ALLOWED_EXTENSIONS'] = {'jpg', 'jpeg'}
 
-# Dummy list of plant diseases
-plant_diseases = ["Image uploaded successfully!!"]
+plant_diseases = ["Image uploaded successfully"]
 
-# Check if file is allowed
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in app.config['ALLOWED_EXTENSIONS']
 
@@ -26,7 +24,6 @@ def upload_image():
         return redirect(request.url)
 
     file = request.files['image']
-
     if file.filename == '':
         flash('No image selected for uploading')
         return redirect(request.url)
@@ -34,7 +31,6 @@ def upload_image():
     if file and allowed_file(file.filename):
         filename = secure_filename(file.filename)
         file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-        # Redirect to display the image and disease info
         return redirect(url_for('result', filename=filename))
     else:
         flash('Allowed image types are .jpg and .jpeg')
@@ -42,9 +38,16 @@ def upload_image():
 
 @app.route('/result/<filename>')
 def result(filename):
-    # Randomly pick a plant disease for demo purposes
     disease = random.choice(plant_diseases)
     return render_template('result.html', filename=filename, disease=disease)
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
 
 if __name__ == "__main__":
     app.run(debug=True)
