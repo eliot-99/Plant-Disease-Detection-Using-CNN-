@@ -28,13 +28,13 @@ To set up the project, follow these steps:
 
 ## Install required packages:
 
-'''bash
+```bash
 pip install -r requirements.txt
 
 Download the dataset from Kaggle and place it in the specified directory structure.
 
 ## Run the application:
-'''bash
+```bash
 python app.py
 
 Access the web application in your browser at http://127.0.0.1:5000.
