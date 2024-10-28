@@ -17,11 +17,6 @@ The **Plant Disease Classification** project leverages Convolutional Neural Netw
 
 The project is trained on the **New Plant Diseases Dataset** (Augmented) from [Kaggle](https://www.kaggle.com/datasets/). This dataset includes a wide variety of images of healthy and diseased plants, organized into classes for different diseases.
 
-### Structure
-
-The dataset is structured into the following directories: '''/New Plant Diseases Dataset(Augmented)/ ├── train/ │ ├── Apple___Apple_scab/ │ ├── Apple___Black_rot/ │ ├── Apple___Cedar_apple_rust/ │ ├── Apple___healthy/ │ ├── Blueberry___healthy/ │ ├── Cherry___Powdery_mildew/ │ ├── Cherry___healthy/ │ ├── Corn___Cercospora_leaf_spot_Gray_leaf_spot/ │ ├── Corn___Common_rust/ │ ├── Corn___Northern_Leaf_Blight/ │ ├── Corn___healthy/ │ ├── Grape___Black_rot/ │ ├── Grape___Esca_(Black_Measles)/ │ ├── Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/ │ ├── Grape___healthy/ │ ├── Orange___Haunglongbing_(Citrus_greening)/ │ ├── Peach___Bacterial_spot/ │ ├── Peach___healthy/ │ ├── Pepper_bell___Bacterial_spot/ │ ├── Pepper_bell___healthy/ │ ├── Potato___Early_blight/ │ ├── Potato___Late_blight/ │ ├── Potato___healthy/ │ ├── Raspberry___healthy/ │ ├── Soybean___healthy/ │ ├── Squash___Powdery_mildew/ │ ├── Strawberry___Leaf_scorch/ │ ├── Strawberry___healthy/ │ ├── Tomato___Bacterial_spot/ │ ├── Tomato___Early_blight/ │ ├── Tomato___Late_blight/ │ ├── Tomato___Leaf_Mold/ │ ├── Tomato___Septoria_leaf_spot/ │ ├── Tomato___Spider_mites_Two-spotted_spider_mite/ │ ├── Tomato___Target_Spot/ │ ├── Tomato___Yellow_Leaf_Curl_Virus/ │ ├── Tomato___mosaic_virus/ │ └── Tomato___healthy/ └── valid/ ├── Apple___Apple_scab/ ├── Apple___Black_rot/ ├── Apple___Cedar_apple_rust/ ├── Apple___healthy/ ├── Blueberry___healthy/ ├── Cherry___Powdery_mildew/ ├── Cherry___healthy/ ├── Corn___Cercospora_leaf_spot_Gray_leaf_spot/ ├── Corn___Common_rust/ ├── Corn___Northern_Leaf_Blight/ ├── Corn___healthy/ ├── Grape___Black_rot/ ├── Grape___Esca_(Black_Measles)/ ├── Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/ ├── Grape___healthy/ ├── Orange___Haunglongbing_(Citrus_greening)/ ├── Peach___Bacterial_spot/ ├── Peach___healthy/ ├── Pepper_bell___Bacterial_spot/ ├── Pepper_bell___healthy/ ├── Potato___Early_blight/ ├── Potato___Late_blight/ ├── Potato___healthy/ ├── Raspberry___healthy/ ├── Soybean___healthy/ ├── Squash___Powdery_mildew/ ├── Strawberry___Leaf_scorch/ ├── Strawberry___healthy/ ├── Tomato___Bacterial_spot/ ├── Tomato___Early_blight/ ├── Tomato___Late_blight/ ├── Tomato___Leaf_Mold/ ├── Tomato___Septoria_leaf_spot/ ├── Tomato___Spider_mites_Two-spotted_spider_mite/ ├── Tomato___Target_Spot/ ├── Tomato___Yellow_Leaf_Curl_Virus/ ├── Tomato___mosaic_virus/ └── Tomato___healthy/'''
-
-
 ## Installation
 
 To set up the project, follow these steps:
@@ -31,28 +26,30 @@ To set up the project, follow these steps:
    git clone https://github.com/eliot-99/Plant-Disease-Detection-Using-CNN-.git
    cd plant-disease-classification
 
-##Install required packages:
+## Install required packages:
 
-
+'''bash
 pip install -r requirements.txt
+
 Download the dataset from Kaggle and place it in the specified directory structure.
 
-##Run the application:
-
+## Run the application:
+'''bash
 python app.py
+
 Access the web application in your browser at http://127.0.0.1:5000.
 
-##Usage
+## Usage
 Navigate to the home page.
 Upload an image of a plant.
 View the predicted disease and additional information about the plant's health.
 Conclusion
 This project assists farmers and agricultural experts in early disease detection, promoting healthier crops and more efficient farming practices. By harnessing the power of machine learning and computer vision, the Plant Disease Classification tool represents a significant advancement in agricultural diagnostics.
 
-##License
+## License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-##Acknowledgments
+## Acknowledgments
 Kaggle for providing the dataset.
 Flask for the web framework.
 TensorFlow for the deep learning library.
