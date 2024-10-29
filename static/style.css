@@ -10,7 +10,7 @@ body {
     font-family: 'Arial', sans-serif;
     background: url('/static/images/background.jpg') no-repeat center center fixed;
     background-size: cover;
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(5px);
     min-height: 100vh;
     color: white;
     display: flex;
@@ -206,9 +206,9 @@ button:hover {
 /* Image Box */
 .image-box img {
     width: 400px;      /* Fixed width */
-    height: 400px;     /* Fixed height */
+    height: 350px;     /* Fixed height */
     overflow: hidden;   /* Hide overflow */
-    border-radius: 10px;
+    border-radius: 20px;
     box-shadow: 0 4px 20px rgba(173, 19, 19, 0.1);
     width: 100%;
     border: 2px solid #34db4a;
@@ -219,7 +219,7 @@ button:hover {
 
 /* Disease Box */
 .disease-box {
-    width: 280px;         /* Fixed width */
+    width: 416px;         /* Fixed width */
     height: 50px;        /* Fixed height */
     padding: 10px;        /* Padding inside the box */
     margin: 20px auto;    /* Center the box horizontally */
