@@ -82,6 +82,8 @@ body {
     margin: 100px auto;
     width: 90%;
     max-width: 500px;
+    max-height: 710px;
+    margin: 40px auto; /* Centering the container */
 }
 
 /* Title Styling */
@@ -137,7 +139,7 @@ button {
     font-weight: 500;
     border: none;
     border-radius: 8px;
-    width: 65%;
+    width: 50%;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
     margin-top: 10px;
@@ -148,6 +150,42 @@ button:hover {
     color: rgb(255, 255, 255);
     transform: scale(1.05);
 }
+/* Progress Bar */
+.progress-container {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 20px;
+    height: 10px;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: #34db4a;
+    transition: width 0.4s ease;
+}
+
+
+/* Footer */
+.footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer p {
+    margin: 0;
+    text-align: center;
+    color: #34db4a;
+    font-size: 0.9em;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
 
 /* Flash Messages */
 .flash-messages {
@@ -167,21 +205,28 @@ button:hover {
 
 /* Image Box */
 .image-box img {
+    width: 400px;      /* Fixed width */
+    height: 400px;     /* Fixed height */
+    overflow: hidden;   /* Hide overflow */
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(173, 19, 19, 0.1);
     width: 100%;
-    max-width: 400px;
-    max-height: 300px;
     border: 2px solid #34db4a;
+    display: flex;     /* Flexbox for centering the image */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
 }
 
 /* Disease Box */
 .disease-box {
-    background-color: #ecf0f1;
-    padding: 17px;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    gap: 5px;
+    width: 280px;         /* Fixed width */
+    height: 50px;        /* Fixed height */
+    padding: 10px;        /* Padding inside the box */
+    margin: 20px auto;    /* Center the box horizontally */
+    text-align: center;    /* Center the text */
+    overflow: hidden;      /* Hide overflow text */
+    background-color: #f9f9f9; /* Light background color */
+    border-radius: 8px;    /* Rounded corners */
 }
 
 .disease-box p {
@@ -191,10 +236,8 @@ button:hover {
     text-align: center;
 }
 
-/* Back Button */
+/* Back Button Styles */
 .back-button {
-    position: relative;
-    left: 65px;
     display: inline-block;
     padding: 12px 25px;
     background-color: #34db4a;
@@ -202,13 +245,32 @@ button:hover {
     font-size: 1em;
     font-weight: 500;
     border-radius: 8px;
-    width: 65%;
+    width: 55%;
     text-align: center;
     text-decoration: none;
     transition: background-color 0.3s ease, transform 0.2s ease;
     gap: 5px;
+    margin:  20px auto ; /* Center the button and add spacing */
+    display: block; /* Ensure it behaves like a block for centering */
 }
 
+/* Back Button Styles */
+.back-button-r {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #34db4a;
+    color: rgb(30, 28, 28);
+    font-size: 1em;
+    font-weight: 500;
+    border-radius: 8px;
+    width: 55%;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    gap: 5px;
+    margin: auto ; /* Center the button and add spacing */
+    display: block; /* Ensure it behaves like a block for centering */
+}
 .back-button:hover {
     background-color: #34db4a;
     color: rgb(255, 253, 253);

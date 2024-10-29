@@ -9,7 +9,7 @@
 <body>
     <!-- Navbar -->
     <nav class="navbar">
-        <div class="logo"><h1>PLANT <span>DISEASE</span> DETECTION🌱</h1></div>
+        <div class="logo"><h1>PLANT <span>DISEASE</span> DETECTION 🌱</h1></div>
         <ul>
             <li><a href="{{ url_for('index') }}">Home</a></li>
             <li><a href="{{ url_for('about') }}">About</a></li>
@@ -19,11 +19,17 @@
 
     <!-- Container -->
     <div class="container">
-        
         <h2>UPLOAD AN IMAGE</h2>
-        <form action="{{ url_for('upload_image') }}" method="POST" enctype="multipart/form-data">
+        
+        <!-- Form with Progress Bar -->
+        <form action="{{ url_for('upload_image') }}" method="POST" enctype="multipart/form-data" id="uploadForm">
             <input type="file" name="image" accept=".jpg,.jpeg" required>
             <button type="submit">Upload</button>
+            
+            <!-- Progress Bar -->
+            <div class="progress-container" id="progressContainer" style="display: none;">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
         </form>
 
         {% with messages = get_flashed_messages() %}
@@ -36,5 +42,49 @@
         {% endif %}
         {% endwith %}
     </div>
+
+    <!-- Centered Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Saptarshi Ghosh. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript for Upload Progress and Redirect
+        const form = document.getElementById('uploadForm');
+        const progressBar = document.getElementById('progressBar');
+        const progressContainer = document.getElementById('progressContainer');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            progressContainer.style.display = 'block'; // Show the progress bar
+
+            const formData = new FormData(form);
+            const xhr = new XMLHttpRequest();
+            xhr.open('POST', form.action, true);
+
+            xhr.upload.addEventListener('progress', function(e) {
+                if (e.lengthComputable) {
+                    const percent = (e.loaded / e.total) * 100;
+                    progressBar.style.width = percent + '%';
+                }
+            });
+
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    // Hide progress bar after upload completes
+                    setTimeout(() => {
+                        progressContainer.style.display = 'none';
+                        progressBar.style.width = '0%';
+                        
+                        // Redirect to the result page with filename and disease
+                        const response = JSON.parse(xhr.responseText);
+                        window.location.href = `/result/${response.filename}?disease=${response.disease}`;
+                    }, 500);
+                }
+            };
+
+            xhr.send(formData);
+        });
+    </script>
 </body>
 </html>
