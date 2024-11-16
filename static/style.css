@@ -1,3 +1,27 @@
+<<<<<<< HEAD
+=======
+@font-face {
+    font-family: 'TropicalTaste';
+    src: url('/static/fonts/Tropical.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Orange';
+    src: url('/static/fonts/Orange.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Magdelin';
+    src: url('/static/fonts/Magdelin.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+>>>>>>> 47443da (plant disease detection v:2)
 /* Base Reset */
 * {
     margin: 0;
@@ -10,7 +34,21 @@ body {
     font-family: 'Arial', sans-serif;
     background: url('/static/images/background.jpg') no-repeat center center fixed;
     background-size: cover;
+<<<<<<< HEAD
     backdrop-filter: blur(5px);
+=======
+    backdrop-filter: blur(4px);
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.results {
+    font-family: 'Arial', sans-serif;
+    background-size: cover;
+    backdrop-filter: blur(4px);
+>>>>>>> 47443da (plant disease detection v:2)
     min-height: 100vh;
     color: white;
     display: flex;
@@ -23,6 +61,10 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
+<<<<<<< HEAD
+=======
+    height:7%;
+>>>>>>> 47443da (plant disease detection v:2)
     padding: 15px 50px;
     background-color: rgba(0, 0, 0, 0.7);
     color: white;
@@ -33,6 +75,10 @@ body {
     z-index: 1000;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 47443da (plant disease detection v:2)
 .navbar .logo h1 {
     font-size: 1.5em;
     font-weight: bold;
@@ -42,6 +88,10 @@ body {
     margin-bottom: 10px;
     margin-top: 10px;
     color: #34db4a;
+<<<<<<< HEAD
+=======
+    font-family: cursive; 
+>>>>>>> 47443da (plant disease detection v:2)
 }
 
 .navbar .logo h1 span {
@@ -56,6 +106,10 @@ body {
 
 .navbar ul li {
     display: inline-block;
+<<<<<<< HEAD
+=======
+    font-family: cursive;
+>>>>>>> 47443da (plant disease detection v:2)
 }
 
 .navbar ul li a {
@@ -69,9 +123,83 @@ body {
     color: #34db4a;
 }
 
+<<<<<<< HEAD
 /* Shared Container for Pages */
 .container {
     background-color: rgba(29, 29, 29, 0.7);
+=======
+/* Falling Leaves Container */
+.falling-leaves {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: -1;
+}
+
+/* Falling Leaf */
+.falling-leaf {
+    position: absolute;
+    top: -50px; /* Start position above the screen */
+    width: 40px;
+    height: 40px;
+    background-image: url('/static/images/leaves.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    animation: fall 12s linear infinite, sway 6s ease-in-out infinite;
+}
+
+/* Falling Animation (Leaves Falling Down) */
+@keyframes fall {
+    0% {
+        top: -50px;  /* Start position above screen */
+        opacity: 0.8;
+    }
+    100% {
+        top: 100vh;  /* Leaves fall to the bottom */
+        opacity: 1;
+    }
+}
+
+/* Swaying Animation (Leaves Moving Side-to-Side) */
+@keyframes sway {
+    0% {
+        transform: translateX(0);  /* Center position */
+    }
+    50% {
+        transform: translateX(-10px); /* Move left slightly */
+    }
+    100% {
+        transform: translateX(10px);  /* Move right slightly */
+    }
+}
+
+/* Airflow Effect - Move the leaves away from the cursor */
+.falling-leaf.airflow {
+    animation: fall 12s linear infinite, sway 6s ease-in-out infinite, airflow 1.5s ease-in-out infinite;
+}
+
+/* Airflow Animation - Leaves fly away from cursor */
+@keyframes airflow {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    100% {
+        transform: translateX(var(--x-move)) translateY(var(--y-move)); /* Move based on cursor position */
+    }
+}
+
+
+
+/* Shared Container for Pages */
+
+.container {
+    background-color: rgba(5, 5, 5, 0.7);
+>>>>>>> 47443da (plant disease detection v:2)
     padding: 40px;
     border-radius: 12px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
@@ -80,6 +208,7 @@ body {
     gap: 15px;
     border: 2px solid white;
     margin: 100px auto;
+<<<<<<< HEAD
     width: 90%;
     max-width: 500px;
     max-height: 710px;
@@ -91,6 +220,110 @@ h2 {
     font-size: 2em;
     color: #34db4a;
     text-transform: uppercase;
+=======
+    width: 500px;
+    height: 710px;
+    margin: 40px auto; /* Centering the container */
+}
+.container_h{
+    background-color: rgba(5, 5, 5, 0.7);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: grid;
+    gap: 15px;
+    border: 2px solid white;
+    margin: 100px auto;
+    width: auto;
+    margin: 40px auto; /* Centering the container */
+}
+.container_c{
+    background-color: rgba(5, 5, 5, 0.7);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: grid;
+    gap: 15px;
+    border: 2px solid white;
+    margin: 100px auto;
+    width: auto;
+    margin: 40px auto; /* Centering the container */
+}
+.container_a {
+    background-color: rgba(5, 5, 5, 0.7);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: grid; /* Change to flexbox to align items side by side */
+    gap: 15px;
+    border: 2px solid white;
+    margin: 40px auto; /* Centering the container */
+    width: 90%; /* Increased width */
+    height: 700px; /* Decreased height */
+    
+    flex-wrap: wrap; /* Allow items to wrap to the next line if they exceed the container width */
+}
+
+.container_fe {
+    background-color: rgba(5, 5, 5, 0.7);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: grid;
+    gap: 15px;
+    border: 2px solid white;
+    margin: 100px auto;
+    margin: 40px auto; /* Centering the container */
+    width: 80%;
+    max-width: 600px;
+    margin: 80px auto;
+    height: 600px; /* Set a fixed height */
+    -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+    scrollbar-width: none;
+}
+.container_fe::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar in WebKit browsers */
+}
+.container_f {
+    text-align: left;
+    display: grid;
+    border-radius: 10px;
+    gap: 15px;
+    /* box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4); */
+    margin: 100px auto;
+    margin: 40px auto; /* Centering the container */
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    overflow-y: auto; /* Enable vertical scrolling */
+    -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+    scrollbar-width: none;
+}
+
+.container_f::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar in WebKit browsers */
+}
+.outer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Space between the two containers */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Title Styling */
+h2 {
+    font-family: cursive;
+    font-size: 2em;
+    color: #34db4a;
+>>>>>>> 47443da (plant disease detection v:2)
     margin-bottom: 20px;
 }
 
@@ -122,7 +355,11 @@ input[type="file"] {
     border-radius: 5px;
     font-size: 1em;
     color: #34495e;
+<<<<<<< HEAD
     width: 65%;
+=======
+    width: 72%;
+>>>>>>> 47443da (plant disease detection v:2)
     cursor: pointer;
     outline: none;
     transition: background-color 0.3s, border 0.3s;
@@ -139,10 +376,20 @@ button {
     font-weight: 500;
     border: none;
     border-radius: 8px;
+<<<<<<< HEAD
     width: 50%;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
     margin-top: 10px;
+=======
+    width: 50%; /* Adjust width to fit your design */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+    display: block; /* Makes the button a block-level element */
+    margin-left: auto; /* Centers the button horizontally */
+    margin-right: auto; /* Centers the button horizontally */
+>>>>>>> 47443da (plant disease detection v:2)
 }
 
 button:hover {
@@ -150,6 +397,10 @@ button:hover {
     color: rgb(255, 255, 255);
     transform: scale(1.05);
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 47443da (plant disease detection v:2)
 /* Progress Bar */
 .progress-container {
     width: 100%;
@@ -218,6 +469,7 @@ button:hover {
 }
 
 /* Disease Box */
+<<<<<<< HEAD
 .disease-box {
     width: 416px;         /* Fixed width */
     height: 50px;        /* Fixed height */
@@ -236,6 +488,62 @@ button:hover {
     text-align: center;
 }
 
+=======
+.disease-info-container {
+    padding: 20px;
+    background-color: #eaf1f1;
+    border-radius: 8px;
+}
+
+.disease-info-container .disease-box.scrollable {
+    width: 100%;
+    padding: 20px;
+    height: 500px; /* Set a fixed height to enable scrolling */
+    overflow-y: auto; /* Enables scrolling when content overflows */
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    color: #2c3e50;
+    font-weight: 400;
+}
+
+.disease-info-container .disease-box p {
+    font-size: 0.9em;
+    color: #2c3e50;
+    font-weight: 400;
+    text-align: left;
+}
+
+/* Disease Box for Disease Name */
+.disease-box {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    background-color: #e0dfdf;
+    border-radius: 8px;
+}
+
+.disease-box.disease p{
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+/* Green color for healthy prediction */
+.disease-box.healthy p{
+    color: #34db4a;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+/* .disease-box p {
+    font-size: 1.2em;
+    color: #2c3e50;
+    font-weight: 500;
+    
+} */
+>>>>>>> 47443da (plant disease detection v:2)
 /* Back Button Styles */
 .back-button {
     display: inline-block;
@@ -254,6 +562,41 @@ button:hover {
     display: block; /* Ensure it behaves like a block for centering */
 }
 
+<<<<<<< HEAD
+=======
+.back-button-a {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #34db4a;
+    color: rgb(30, 28, 28);
+    font-size: 1em;
+    font-weight: 500;
+    border-radius: 8px;
+    width: 20%;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    gap: 5px;
+    margin:  20px auto ; /* Center the button and add spacing */
+    display: block; /* Ensure it behaves like a block for centering */
+}
+.back-button-ag {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #34db4a;
+    color: rgb(30, 28, 28);
+    font-size: 1em;
+    font-weight: 500;
+    border-radius: 8px;
+    width: 30%;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    gap: 5px;
+    margin:  20px auto ; /* Center the button and add spacing */
+    display: block; /* Ensure it behaves like a block for centering */
+}
+>>>>>>> 47443da (plant disease detection v:2)
 /* Back Button Styles */
 .back-button-r {
     display: inline-block;
@@ -271,11 +614,185 @@ button:hover {
     margin: auto ; /* Center the button and add spacing */
     display: block; /* Ensure it behaves like a block for centering */
 }
+<<<<<<< HEAD
+=======
+.back-button-r:hover {
+    background-color: #34db4a;
+    color: rgb(255, 253, 253);
+    transform: scale(1.05);
+}
+.back-button-a:hover {
+    background-color: #34db4a;
+    color: rgb(255, 253, 253);
+    transform: scale(1.05);
+}
+.back-button-ag:hover {
+    background-color: #34db4a;
+    color: rgb(255, 253, 253);
+    transform: scale(1.05);
+}
+>>>>>>> 47443da (plant disease detection v:2)
 .back-button:hover {
     background-color: #34db4a;
     color: rgb(255, 253, 253);
     transform: scale(1.05);
 }
+<<<<<<< HEAD
+=======
+.button-container {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.feedback-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #34db4a;
+    color: rgb(30, 28, 28);
+    font-size: 1em;
+    font-weight: 500;
+    border-radius: 8px;
+    width: 55%;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    gap: 5px;
+    margin: auto ; /* Center the button and add spacing */
+    display: block; /* Ensure it behaves like a block for centering */
+}
+
+
+.feedback-button {
+    background-color: #2196F3; /* Different color for feedback button */
+}
+
+.feedback-button:hover {
+    background-color: #118df3;
+    color: rgb(255, 253, 253);
+    transform: scale(1.05);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.flash-messages {
+    color: #01f54a; /* Red for errors or alerts */
+    border-radius: 5px;
+    padding: 10px;
+    margin: 15px 0; /* Adds space between flash messages and other content */
+    list-style: none;
+    width: 50%;
+}
+.flash-messages li {
+    margin: 5px 0; /* Adds spacing between messages */
+}
+
+
+.progress-container {
+    display: none; /* Initially hidden */
+    text-align: center;
+    font-size: 24px;
+    margin-top: 20px;
+    background-color: #118df300;
+    width: 100%; /* Ensure the container spans the width */
+    height: 50px; /* Control the height of the container */
+}
+
+.progress-dot {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #28a745;
+    border-radius: 50%;
+    margin: 0 5px;
+    opacity: 0;
+    animation: blink 1.5s infinite;
+}
+
+.progress-dot:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.progress-dot:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.progress-dot:nth-child(3) {
+    animation-delay: 1s;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.disease-info-container p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Styling for the <strong> elements (to make headings stand out) */
+.disease-info-container strong {
+    color: #131413; /* Lime green to match the header */
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Styling for the <ul> lists */
+.disease-info-container ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-top: 2px;
+    padding-left: 5px;
+}
+
+/* Styling for each <li> item */
+.disease-info-container ul li {
+    margin: 8px 0;
+    font-size: 1rem;
+}
+
+>>>>>>> 47443da (plant disease detection v:2)
 
 /* Responsive Styles for Smaller Screens */
 @media screen and (max-width: 768px) {
